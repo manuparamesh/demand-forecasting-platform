@@ -22,8 +22,6 @@ models/      # saved model artifacts and metadata
 tests/       # API tests
 data/        # sample raw and processed data
 
-
-```md
 ## Architecture
 
 The platform follows a modular ML service architecture:
