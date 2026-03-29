@@ -1,0 +1,21 @@
+model:
+  name: xgboost_regressor
+  params:
+    n_estimators: 300
+    max_depth: 6
+    learning_rate: 0.05
+    subsample: 0.9
+    colsample_bytree: 0.9
+    objective: reg:squarederror
+    random_state: 42
+
+features:
+  lags: [1, 2, 3, 6, 12]
+  rolling_windows: [3, 6]
+
+training:
+  target_column: sales
+  test_size_ratio: 0.2
+
+mlflow:
+  experiment_name: demand_forecasting_experiment
